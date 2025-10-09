@@ -127,7 +127,7 @@ python -m ipykernel install --user --name brfss-venv --display-name "Python (brf
 python -m venv .venv
 .\.venv\Scripts\activate.bat
 python -m pip install --upgrade pip
-pip install -r requirements.txt    REM or: -r 01_requirements.txt if that's your file
+pip install -r requirements.txt    
 pip install pandas pyreadstat pyarrow jupyter ipykernel
 python -m ipykernel install --user --name brfss-venv --display-name "Python (brfss)"
 ```
