@@ -101,16 +101,37 @@ Key LAUS variables: unemployment rates, labor force size, employment ratios.
 ```
 ---
 
-## ⚡ Quickstart
 
-### 1️⃣ Environment
+# ⚡ Quickstart
+
+### 1️⃣ Set up a **project-local** Python environment and register it as a Jupyter/VS Code kernel.
+
+---
+
+## macOS / Linux (bash/zsh)
 
 ```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install --upgrade pip
-pip install -r 01_requirements.txt
-pip install pandas pyreadstat pyarrow
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt    # or: -r 01_requirements.txt if that's your file
+pip install pandas pyreadstat pyarrow jupyter ipykernel
+python -m ipykernel install --user --name brfss-venv --display-name "Python (brfss)"
 ```
+
+---
+
+## Windows (Command Prompt)
+
+```bat
+python -m venv .venv
+.\.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+pip install -r requirements.txt    REM or: -r 01_requirements.txt if that's your file
+pip install pandas pyreadstat pyarrow jupyter ipykernel
+python -m ipykernel install --user --name brfss-venv --display-name "Python (brfss)"
+```
+
 
 ### 2️⃣ Download BRFSS Data
 
